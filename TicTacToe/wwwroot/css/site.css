@@ -12,26 +12,49 @@ body {
     padding-right: 15px;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+.square {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    font-size: 90px;
+    color: forestgreen;
+    text-align: center;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+.square-2 {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    font-size: 90px;
+    color: forestgreen;
+    text-align: center;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+.square-2:nth-child(2n) {
+    border-left:solid 1px black;
+    border-right: solid 1px black;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
+#grid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#grid-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.square-hover {
+    background-color: gold;
+}
+
+.row {
+    display: flex;
+}
+
+.row:nth-child(1) {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
 }
